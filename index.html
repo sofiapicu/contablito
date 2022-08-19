@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contablito</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<main>
+
+    <header>
+        <h1>Contablito</h1>
+    </header>
+
+    <section>
+        <form action="">
+            <label for="descripcion">Descripción</label>
+            <input type="text" placeholder="Descripción" name="descripcion" id="des">
+            <br>
+            <label for="tCompra">Tipo de Transacción</label>
+            <input type="radio" name="tCompra" value="Compra" id="compra"> Compra
+            <input type="radio" name="tCompra" value="Venta" id="venta"> Venta
+            <br>
+            <label for="tIva">Tipo de Iva</label>
+            <input type="radio" name="tIva" value="Basico" id="iBasico"> Básico
+            <input type="radio" name="tIva" value="Minimo" id="iMinimo"> Mínimo
+            <input type="radio" name="tIva" value="Exento" id="iExento"> Exento
+            <br>
+            <label for="subTotal">Subtotal ($)</label>
+            <input type="number" placeholder="Valor" name="subTotal" id="sTotal">
+            <input type="submit" value="Ingresar" id="ingresar">
+          </form>  
+    </section>
+
+    <section>
+        <table>
+            <thead>
+                <th>Descripción</th>
+                <th>Tipo</th>
+                <th>Subtotal ($)</th>
+                <th>Iva ($)</th>
+                <th>Total (IVA inc)</th>
+            </thead>
+            <tbody id="datos">
+            </tbody>
+          </table>
+    </section>
+
+    <footer>
+        <p id="totales"></p>
+    </footer>
+
+</main>    
+</body>
+</html>
